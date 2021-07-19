@@ -35,7 +35,7 @@ class BeerListPresenter: BeerListPresenterInput {
     }
     
     func beer(forRow row: Int) -> Beer? {
-        if row > beers.count {
+        if row >= beers.count {
             return nil
         }
         return beers[row]
