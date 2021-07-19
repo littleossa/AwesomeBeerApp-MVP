@@ -11,8 +11,6 @@ class BeerListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
-    private let cellId = "BeerListCell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +27,8 @@ extension BeerListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.IdOfBeerList,
+                                                 for: indexPath)
         cell.textLabel?.text = ""
         return cell
     }

@@ -15,6 +15,7 @@
 		9859A65626A4F801005C493D /* AwesomeBeerApp_MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A65526A4F801005C493D /* AwesomeBeerApp_MVPUITests.swift */; };
 		9859A66926A5137F005C493D /* BeerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9859A66826A5137F005C493D /* BeerList.storyboard */; };
 		9859A66B26A51399005C493D /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A66A26A51399005C493D /* BeerListViewController.swift */; };
+		9859A66E26A51761005C493D /* UITableViewCell+CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9859A65726A4F801005C493D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9859A66826A5137F005C493D /* BeerList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerList.storyboard; sourceTree = "<group>"; };
 		9859A66A26A51399005C493D /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
+		9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellId.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		9859A63226A4F7FF005C493D /* AwesomeBeerApp-MVP */ = {
 			isa = PBXGroup;
 			children = (
+				9859A66C26A51738005C493D /* Extesions */,
 				9859A66326A512A1005C493D /* Model */,
 				9859A66426A512A7005C493D /* View */,
 				9859A66526A512AD005C493D /* Presenter */,
@@ -166,6 +169,14 @@
 				9859A66A26A51399005C493D /* BeerListViewController.swift */,
 			);
 			path = BeerList;
+			sourceTree = "<group>";
+		};
+		9859A66C26A51738005C493D /* Extesions */ = {
+			isa = PBXGroup;
+			children = (
+				9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */,
+			);
+			path = Extesions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9859A66E26A51761005C493D /* UITableViewCell+CellId.swift in Sources */,
 				9859A66B26A51399005C493D /* BeerListViewController.swift in Sources */,
 				9859A63426A4F7FF005C493D /* AppDelegate.swift in Sources */,
 				9859A63626A4F7FF005C493D /* SceneDelegate.swift in Sources */,
