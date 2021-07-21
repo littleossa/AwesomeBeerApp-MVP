@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BrewDog A-->
+        <!--BrewDog App-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="MashimashiViewController" customModule="AwesomeBeerApp_MVP" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hcD-lF-vBM" secondAttribute="trailing" id="qeM-HF-Wvl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BrewDog A" id="VQh-At-Rra"/>
+                    <navigationItem key="navigationItem" title="BrewDog App" id="VQh-At-Rra"/>
                     <connections>
                         <outlet property="tableView" destination="hcD-lF-vBM" id="7cK-TX-HrP"/>
                     </connections>
