@@ -22,6 +22,8 @@
 		9859A67626A5459F005C493D /* PunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67526A5459F005C493D /* PunkAPIService.swift */; };
 		9859A67826A55422005C493D /* BeerListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67726A55422005C493D /* BeerListPresenterTests.swift */; };
 		9859A68226A56969005C493D /* Beer+BeersMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67F26A55EEB005C493D /* Beer+BeersMock.swift */; };
+		9859A68526A8D482005C493D /* Mashimashi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9859A68426A8D482005C493D /* Mashimashi.storyboard */; };
+		9859A68726A8D48F005C493D /* MashimashiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A68626A8D48F005C493D /* MashimashiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		9859A67526A5459F005C493D /* PunkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIService.swift; sourceTree = "<group>"; };
 		9859A67726A55422005C493D /* BeerListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListPresenterTests.swift; sourceTree = "<group>"; };
 		9859A67F26A55EEB005C493D /* Beer+BeersMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer+BeersMock.swift"; sourceTree = "<group>"; };
+		9859A68426A8D482005C493D /* Mashimashi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mashimashi.storyboard; sourceTree = "<group>"; };
+		9859A68626A8D48F005C493D /* MashimashiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MashimashiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9859A63226A4F7FF005C493D /* AwesomeBeerApp-MVP */,
+				9859A68326A8D452005C493D /* MVC-Sample */,
 				9859A64926A4F801005C493D /* AwesomeBeerApp-MVPTests */,
 				9859A65426A4F801005C493D /* AwesomeBeerApp-MVPUITests */,
 				9859A63126A4F7FF005C493D /* Products */,
@@ -195,6 +200,15 @@
 				9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */,
 			);
 			path = Extesions;
+			sourceTree = "<group>";
+		};
+		9859A68326A8D452005C493D /* MVC-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				9859A68426A8D482005C493D /* Mashimashi.storyboard */,
+				9859A68626A8D48F005C493D /* MashimashiViewController.swift */,
+			);
+			path = "MVC-Sample";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9859A68526A8D482005C493D /* Mashimashi.storyboard in Resources */,
 				9859A64026A4F801005C493D /* LaunchScreen.storyboard in Resources */,
 				9859A63D26A4F801005C493D /* Assets.xcassets in Resources */,
 				9859A66926A5137F005C493D /* BeerList.storyboard in Resources */,
@@ -335,6 +350,7 @@
 				9859A63426A4F7FF005C493D /* AppDelegate.swift in Sources */,
 				9859A67026A5180F005C493D /* BeerListPresenter.swift in Sources */,
 				9859A63626A4F7FF005C493D /* SceneDelegate.swift in Sources */,
+				9859A68726A8D48F005C493D /* MashimashiViewController.swift in Sources */,
 				9859A67426A52020005C493D /* PunkAPIDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
