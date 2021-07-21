@@ -8,48 +8,27 @@
 import XCTest
 @testable import AwesomeBeerApp_MVP
 
-class BeerListPresenterInputMock: BeerListPresenterInput {
+class BeerListPresenterOutputMock: BeerListPresenterOutput {
     
-    private (set) var beers = Beer.mockBeers()
-    
-    var numberOfBeers: Int {
-        return beers.count
+    func didFetch(_ beers: [Beer]) {
     }
     
-    func beer(forRow row: Int) -> Beer? {
-        if row >= beers.count {
-            return nil
-        }
-        return beers[row]
+    func didFailToFetchBeer(with error: Error) {
     }
     
-    func didSelectRowAt(_ indexPath: IndexPath) {
-//        guard let beer = beer(forRow: indexPath.row)
-//        else { return }
-//        outputView?.transitionToBeerDetail(of: beer)
+    func didPrepareInfomation(of beer: Beer) {
     }
+}
+
+class BeerListPresenterStub: BeerListPresenter {
     
-    func loadBeers() {
-        PunkAPIManager.instance.loadBeer { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-//                self?.outputView?.didFailToLoadBeers(with: error)
-            case .success(let loadedBeer):
-                self?.beers = loadedBeer
-                guard let beers = self?.beers
-                else { return }
-                print(beers)
-//                self?.outputView?.didLoad(beers)
-            }
-        }
+    override var beers: [Beer] {
+        Beer.mockBeers()
     }
 }
 
 class BeerListPresenterTests: XCTestCase {
     
-    var presenter = BeerListPresenterInputMock()
-
     override func setUpWithError() throws {
     }
 
@@ -58,6 +37,8 @@ class BeerListPresenterTests: XCTestCase {
     
     func testBeerForRow() throws {
         // mockBeersのカウントは3
+        let mock = BeerListPresenterOutputMock()
+        let presenter = BeerListPresenterStub(with: mock)
         XCTContext.runActivity(named: "rowの値がbeersのcountより小さい場合は戻り値がnilではないこと") { _ in
             let beer = presenter.beer(forRow: 0)
             XCTAssertNotNil(beer, "beerが返されること")
