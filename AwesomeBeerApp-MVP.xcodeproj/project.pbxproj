@@ -18,7 +18,7 @@
 		9859A66E26A51761005C493D /* UITableViewCell+CellId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */; };
 		9859A67026A5180F005C493D /* BeerListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A66F26A5180F005C493D /* BeerListPresenter.swift */; };
 		9859A67226A51926005C493D /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67126A51926005C493D /* Beer.swift */; };
-		9859A67426A52020005C493D /* PunkAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67326A52020005C493D /* PunkAPIManager.swift */; };
+		9859A67426A52020005C493D /* PunkAPIDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67326A52020005C493D /* PunkAPIDataModel.swift */; };
 		9859A67626A5459F005C493D /* PunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67526A5459F005C493D /* PunkAPIService.swift */; };
 		9859A67826A55422005C493D /* BeerListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67726A55422005C493D /* BeerListPresenterTests.swift */; };
 		9859A68226A56969005C493D /* Beer+BeersMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67F26A55EEB005C493D /* Beer+BeersMock.swift */; };
@@ -59,7 +59,7 @@
 		9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellId.swift"; sourceTree = "<group>"; };
 		9859A66F26A5180F005C493D /* BeerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListPresenter.swift; sourceTree = "<group>"; };
 		9859A67126A51926005C493D /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
-		9859A67326A52020005C493D /* PunkAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIManager.swift; sourceTree = "<group>"; };
+		9859A67326A52020005C493D /* PunkAPIDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIDataModel.swift; sourceTree = "<group>"; };
 		9859A67526A5459F005C493D /* PunkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIService.swift; sourceTree = "<group>"; };
 		9859A67726A55422005C493D /* BeerListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListPresenterTests.swift; sourceTree = "<group>"; };
 		9859A67F26A55EEB005C493D /* Beer+BeersMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer+BeersMock.swift"; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			children = (
 				9859A67126A51926005C493D /* Beer.swift */,
 				9859A67526A5459F005C493D /* PunkAPIService.swift */,
-				9859A67326A52020005C493D /* PunkAPIManager.swift */,
+				9859A67326A52020005C493D /* PunkAPIDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 				9859A63426A4F7FF005C493D /* AppDelegate.swift in Sources */,
 				9859A67026A5180F005C493D /* BeerListPresenter.swift in Sources */,
 				9859A63626A4F7FF005C493D /* SceneDelegate.swift in Sources */,
-				9859A67426A52020005C493D /* PunkAPIManager.swift in Sources */,
+				9859A67426A52020005C493D /* PunkAPIDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
