@@ -7,15 +7,13 @@
 
 import Foundation
 
-protocol PunkAPIManagerInput {
-    func loadBeer(completion: @escaping ((Result<[Beer], Error>) -> ()))
+protocol PunkAPIDataModelInput {
+    func fetchBeer(completion: @escaping ((Result<[Beer], Error>) -> ()))
 }
 
-class PunkAPIManager: PunkAPIManagerInput {
-    
-    static let instance = PunkAPIManager()
-            
-    func loadBeer(completion: @escaping ((Result<[Beer], Error>) -> ())) {
+class PunkAPIDataModel: PunkAPIDataModelInput {
+                
+    func fetchBeer(completion: @escaping ((Result<[Beer], Error>) -> ())) {
         guard let url = URL(string: PunkAPIService.baseUrlString)
         else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
