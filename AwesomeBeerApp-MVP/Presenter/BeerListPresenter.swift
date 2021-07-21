@@ -10,24 +10,27 @@ import Foundation
 protocol BeerListPresenterInput {
     var numberOfBeers: Int { get }
     func beer(forRow row: Int) -> Beer?
-    func loadBeers()
+    func viewDidLoad()
     func didSelectRowAt(_ indexPath: IndexPath)
 }
 
-protocol BeerListPresenterOutPut: NSObject {
-    func didLoad(_ beers: [Beer])
-    func didFailToLoadBeers(with error: Error)
-    func transitionToBeerDetail(of beer: Beer)
+protocol BeerListPresenterOutput: AnyObject {
+    func didFetch(_ beers: [Beer])
+    func didFailToFetchBeer(with error: Error)
+//    func transitionToBeerDetail(of beer: Beer)
+    func didPrepareInfomation(of beer: Beer)
 }
 
 class BeerListPresenter: BeerListPresenterInput {
     
     private(set) var beers = [Beer]()
     
-    private weak var outputView: BeerListPresenterOutPut?
+    private weak var view: BeerListPresenterOutput?
+    private var dataModel: PunkAPIDataModelInput
     
-    init(view: BeerListPresenterOutPut) {
-        outputView = view
+    init(with view: BeerListPresenterOutput) {
+        self.view = view
+        self.dataModel = PunkAPIDataModel()
     }
 
     var numberOfBeers: Int {
@@ -41,23 +44,24 @@ class BeerListPresenter: BeerListPresenterInput {
         return beers[row]
     }
     
-    func didSelectRowAt(_ indexPath: IndexPath) {
-        guard let beer = beer(forRow: indexPath.row)
-        else { return }
-        outputView?.transitionToBeerDetail(of: beer)
-    }
-    
-    func loadBeers() {
-        PunkAPIManager.instance.loadBeer { [weak self] result in
+    func viewDidLoad() {
+        dataModel.fetchBeer { [weak self] result in
             switch result {
             case .failure(let error):
-                self?.outputView?.didFailToLoadBeers(with: error)
+                self?.view?.didFailToFetchBeer(with: error)
             case .success(let loadedBeer):
                 self?.beers = loadedBeer
                 guard let beers = self?.beers
-                else { return }
-                self?.outputView?.didLoad(beers)
+                else { fatalError() }
+                self?.view?.didFetch(beers)
             }
         }
+    }
+    
+    func didSelectRowAt(_ indexPath: IndexPath) {
+        guard let beer = beer(forRow: indexPath.row)
+        else { return }
+        view?.didPrepareInfomation(of: beer)
+//        view?.transitionToBeerDetail(of: beer)
     }
 }
