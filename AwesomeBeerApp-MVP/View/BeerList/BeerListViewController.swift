@@ -18,25 +18,30 @@ class BeerListViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        presenter = BeerListPresenter(view: self)
-        presenter.loadBeers()
+        presenter = BeerListPresenter.init(with: self)
+        presenter.viewDidLoad()
     }
 }
 
-extension BeerListViewController: BeerListPresenterOutPut {
+extension BeerListViewController: BeerListPresenterOutput {
     
-    func didLoad(_ beers: [Beer]) {
+    func didFetch(_ beers: [Beer]) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
-    func didFailToLoadBeers(with error: Error) {
+    func didFailToFetchBeer(with error: Error) {
         print(error)
     }
     
-    func transitionToBeerDetail(of beer: Beer) {
-        print("Transition with ", beer)
+    func didPrepareInfomation(of beer: Beer) {
+        let alert = UIAlertController(title: beer.name,
+                                      message: "\(beer.tagline)\n\n\(beer.description)",
+                                      preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(alertAction)
+        present(alert, animated: true)
     }
 }
 
