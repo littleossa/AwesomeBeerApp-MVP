@@ -62,6 +62,7 @@ class MashimashiViewController: UIViewController {
     }
 }
 
+    // MARK: - UITable view data source
 extension MashimashiViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,6 +77,7 @@ extension MashimashiViewController: UITableViewDataSource {
     }
 }
 
+    // MARK: - UITable view delegate
 extension MashimashiViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
