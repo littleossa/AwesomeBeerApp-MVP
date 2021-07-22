@@ -24,6 +24,7 @@
 		9859A68226A56969005C493D /* Beer+BeersMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A67F26A55EEB005C493D /* Beer+BeersMock.swift */; };
 		9859A68526A8D482005C493D /* Mashimashi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9859A68426A8D482005C493D /* Mashimashi.storyboard */; };
 		9859A68726A8D48F005C493D /* MashimashiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A68626A8D48F005C493D /* MashimashiViewController.swift */; };
+		9859A68926AA14AA005C493D /* UIAlertController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9859A68826AA14AA005C493D /* UIAlertController+Present.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		9859A67F26A55EEB005C493D /* Beer+BeersMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer+BeersMock.swift"; sourceTree = "<group>"; };
 		9859A68426A8D482005C493D /* Mashimashi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mashimashi.storyboard; sourceTree = "<group>"; };
 		9859A68626A8D48F005C493D /* MashimashiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MashimashiViewController.swift; sourceTree = "<group>"; };
+		9859A68826AA14AA005C493D /* UIAlertController+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Present.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				9859A66D26A51760005C493D /* UITableViewCell+CellId.swift */,
+				9859A68826AA14AA005C493D /* UIAlertController+Present.swift */,
 			);
 			path = Extesions;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				9859A63426A4F7FF005C493D /* AppDelegate.swift in Sources */,
 				9859A67026A5180F005C493D /* BeerListPresenter.swift in Sources */,
 				9859A63626A4F7FF005C493D /* SceneDelegate.swift in Sources */,
+				9859A68926AA14AA005C493D /* UIAlertController+Present.swift in Sources */,
 				9859A68726A8D48F005C493D /* MashimashiViewController.swift in Sources */,
 				9859A67426A52020005C493D /* PunkAPIDataModel.swift in Sources */,
 			);
