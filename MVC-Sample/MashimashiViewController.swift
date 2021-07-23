@@ -22,11 +22,16 @@ class MashimashiViewController: UIViewController {
         fetchBeer { result in
             switch result {
             case .failure(let error):
-                UIAlertController.present(on: self,
-                                          title: "Error",
-                                          messsage: "\(error)",
-                                          cancelActionTitle: "OK",
-                                          shouldWorkOnMainThread: true)
+                let alert = UIAlertController(title: "Error",
+                                              message: "\(error)",
+                                              preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .cancel)
+                alert.addAction(alertAction)
+                
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true)
+                }
+                
             case .success(let beers):
                 self.beers = beers
                 
@@ -83,9 +88,11 @@ extension MashimashiViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let beer = beers[indexPath.row]
-        UIAlertController.present(on: self,
-                                  title: beer.name,
-                                  messsage: "\(beer.tagline)\n\n\(beer.description)",
-                                  cancelActionTitle: "OK")
+        let alert = UIAlertController(title: beer.name,
+                                      message: "\(beer.tagline)\n\n\(beer.description)",
+                                      preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(alertAction)
+        present(alert, animated: true)
     }
 }
