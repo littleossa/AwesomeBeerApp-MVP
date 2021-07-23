@@ -32,16 +32,18 @@ extension BeerListViewController: BeerListPresenterOutput {
     }
     
     func didFailToFetchBeer(with error: Error) {
-        print(error)
+        UIAlertController.present(on: self,
+                                  title: "Error",
+                                  messsage: "\(error)",
+                                  cancelActionTitle: "OK",
+                                  shouldWorkOnMainThread: true)
     }
     
     func didPrepareInfomation(of beer: Beer) {
-        let alert = UIAlertController(title: beer.name,
-                                      message: "\(beer.tagline)\n\n\(beer.description)",
-                                      preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel)
-        alert.addAction(alertAction)
-        present(alert, animated: true)
+        UIAlertController.present(on: self,
+                                  title: beer.name,
+                                  messsage: "\(beer.tagline)\n\n\(beer.description)",
+                                  cancelActionTitle: "OK")
     }
 }
 
