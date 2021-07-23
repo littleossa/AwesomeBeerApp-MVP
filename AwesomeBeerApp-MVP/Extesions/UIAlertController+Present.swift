@@ -9,7 +9,7 @@ import UIKit
 
 extension UIAlertController {
     
-    class func present(at viewController: UIViewController, title: String, messsage: String, cancelActionTitle: String, shouldWorkOnMainThread: Bool = false) {
+    class func present(on viewController: UIViewController, title: String, messsage: String, cancelActionTitle: String, shouldWorkOnMainThread: Bool = false) {
         
         let alert = UIAlertController(title: title, message: messsage, preferredStyle: .alert)
         let action = UIAlertAction(title: cancelActionTitle, style: .cancel)
