@@ -45,7 +45,7 @@ class BeerListPresenter: BeerListPresenterInput {
     }
     
     func viewDidLoad() {
-        dataModel.fetchBeer { [weak self] result in
+        dataModel.fetchBeers { [weak self] result in
             switch result {
             case .failure(let error):
                 self?.view?.didFailToFetchBeer(with: error)
