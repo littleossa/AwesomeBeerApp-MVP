@@ -17,8 +17,7 @@ protocol BeerListPresenterInput {
 protocol BeerListPresenterOutput: AnyObject {
     func didFetch(_ beers: [Beer])
     func didFailToFetchBeer(with error: Error)
-//    func transitionToBeerDetail(of beer: Beer)
-    func didPrepareInfomation(of beer: Beer)
+    func transitionToBeerDetail(of beer: Beer)
 }
 
 class BeerListPresenter: BeerListPresenterInput {
@@ -61,7 +60,6 @@ class BeerListPresenter: BeerListPresenterInput {
     func didSelectRowAt(_ indexPath: IndexPath) {
         guard let beer = beer(forRow: indexPath.row)
         else { return }
-        view?.didPrepareInfomation(of: beer)
-//        view?.transitionToBeerDetail(of: beer)
+        view?.transitionToBeerDetail(of: beer)
     }
 }

@@ -10,4 +10,5 @@ import UIKit
 extension UITableViewCell {
     
     static let IdOfBeerList = "BeerListCell"
+    static let IdOfBeerDetail = "BeerDetailCell"
 }

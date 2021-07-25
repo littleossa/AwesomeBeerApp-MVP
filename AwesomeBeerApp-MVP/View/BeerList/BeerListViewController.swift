@@ -39,11 +39,12 @@ extension BeerListViewController: BeerListPresenterOutput {
                                   shouldWorkOnMainThread: true)
     }
     
-    func didPrepareInfomation(of beer: Beer) {
-        UIAlertController.present(on: self,
-                                  title: beer.name,
-                                  messsage: "\(beer.tagline)\n\n\(beer.description)",
-                                  cancelActionTitle: "OK")
+    func transitionToBeerDetail(of beer: Beer) {
+        let destinationStoryboard = UIStoryboard(name: "BeerDetail", bundle: nil)
+        guard let viewController = destinationStoryboard.instantiateInitialViewController() as? BeerDetailViewController
+        else { fatalError() }
+        viewController.presenter = BeerDetailPresenter(with: viewController, and: beer)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
